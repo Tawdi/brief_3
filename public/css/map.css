@@ -169,3 +169,86 @@ p {
         margin: 0;
     }
 }
+@media (min-width: 768px) {
+  .container {
+      flex-direction: row;
+      margin-top: 40px;
+  }
+
+  #map {
+      width: 60%;
+      height: 80vh;
+      margin-bottom: 20px;
+  }
+
+  .text-content {
+      width: 35%;
+      margin-top: 0;
+  }
+
+  .menu {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 80px;
+      margin-top: 40px; /* Ajoute une marge en haut du menu pour les écrans plus larges */
+  }
+
+  .logo {
+      margin: 0;
+  }
+}
+
+/* Styles for small screens (mobile devices) */
+@media (max-width: 767px) {
+  header {
+      padding: 10px 5%;
+  }
+
+  .home {
+      margin-bottom: 40px;
+  }
+
+  .menu {
+      margin-bottom: 40px;
+  }
+
+  .logo {
+      font-size: 30px;
+      margin-bottom: 10px;
+  }
+
+  .links li {
+      margin: 0 10px;
+  }
+
+  .container {
+      margin-top: 20px;
+  }
+
+  #map {
+      height: 30vh;
+  }
+
+  .text-content {
+      padding: 10px;
+  }
+}
+
+/* Styles for extra small screens (very small mobile devices) */
+@media (max-width: 480px) {
+  .logo {
+      font-size: 24px;
+  }
+
+  .links li {
+      margin: 0 5px;
+  }
+
+  #map {
+      height: 25vh;
+  }
+
+  .text-content {
+      padding: 5px;
+  }
+}
