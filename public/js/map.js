@@ -898,7 +898,7 @@ document.addEventListener('DOMContentLoaded', function() {
           
     ];
     const customIcon = L.icon({
-        iconUrl: '../../images/map_marker.png', // Remplacez par le chemin de votre logo
+        iconUrl: '/brief_3/images/map_marker.png', // Remplacez par le chemin de votre logo
         iconSize: [20, 20], // Taille de l'icône
         iconAnchor: [16, 32], // Point d'ancrage de l'icône (centre bas)
     });
