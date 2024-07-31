@@ -171,13 +171,14 @@ button{
 .image_box_owner{
   width: 45%;
   height: 100%;
+  margin-left: 10px;
 }
 
 .image_box_owner img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 10px;
   box-shadow: 0 32px 80px -32px rgba(0, 0, 0, .24);
 }
 
@@ -295,8 +296,7 @@ button{
 
 .analyse {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -310,17 +310,20 @@ button{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s;
-  width: 30%;
+  width: 48.5%;
+  margin-left: 10px;
+  height: 200px;
 }
 
 .analyse .card:hover {
   transform: translateY(-10px);
 }
 
-.analyse .card .image img  {
-  /* width: 100%; */
+.analyse .card .image img {
+  width: 85%;
   margin: 30px;
   background-size: cover;
+  border-radius: 0px 10px 0px 10px;
   /* height: auto; */
   /* display: block; */
 }
@@ -334,6 +337,11 @@ button{
   margin-bottom: 10px;
   font-size: 1.2em;
   color: #333;
+}
+
+.analyse .card .content h3 a {
+  text-decoration: none;
+  color: #000;
 }
 
 .analyse .card .content p {
