@@ -4,21 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carte et Texte</title>
-    <link rel="stylesheet" href="/public/css/map.css">
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-markercluster@1.7.0/dist/MarkerCluster.Default.css" />
+    <link rel="shortcut icon" href="images/analyse-de-sol.png" type="image/x-icon">
+    <link rel="stylesheet" href="public/css/map.css">
+    
+
 </head>
 <body>
-    <nav>
-        <ul class="links">
-            <li><a href="#">acceuil</a></li>
-            <li><a href="#">à propose</a></li>
-            <li><a href="#">analyse de sol</a></li>
-            <li><a href="#">carte graphique</a></li>
-            <li><a href="#">contact</a></li>
-          </ul>
+    <div class="menu-container">
+        <button class="menu-toggle" id="menu-toggle">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+        </button>
+        <nav>
+            <ul class="links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html">À propos</a></li>
+                <li><a href="index.html">Analyse de sol</a></li>
+                <li><a href="map.html">Carte graphique</a></li>
+                <li><a href="map.html">Contact</a></li>
+            </ul>
         </nav>
-      </div>
+    </div>
+    
     <div class="container">
         <div id="map"></div>
         <div class="text-content">
@@ -30,10 +41,12 @@
     </div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
     <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-markercluster@1.7.0/dist/leaflet-markercluster.js"></script>
     <script src="public/js/map.js"></script>
+
 </body>
 </html>
 

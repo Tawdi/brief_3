@@ -1,23 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600;700&display=swap');
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-/* Style général */
 header {
     padding: 20px 15%;
+    background-color: #fff;
 }
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 a {
@@ -28,46 +30,57 @@ button {
     cursor: pointer;
 }
 
-/* .home section with theme colors */
 .home {
     min-height: 90vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("../../images/1-enhanced.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
     background-position: center;
     background-size: cover;
     position: relative;
-    margin-bottom: 230px;
+    margin-bottom: 80px;
     width: 100%;
 }
 
-/* Menu styling */
 .menu {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    margin-bottom: 60px;
 }
 
-/* Logo styling with green color */
+.menu ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
 .logo {
     font-weight: 400;
-    color: #2d6a4f; /* Green */
+    color: #2d6a4f;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 40px;
     font-style: italic;
     font-family: 'Anton', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Links styling */
 .links {
     display: flex;
+    justify-content: center;
 }
 
 .links li {
-    margin: 20px;
+    margin: 0 15px;
 }
 
 .links li a {
-    color: #1f4037; /* Dark Green */
+    color: #1f4037;
     position: relative;
 }
 
@@ -76,7 +89,7 @@ button {
     position: absolute;
     left: 0;
     bottom: -5px;
-    background-color: #057a2a; /* Blue */
+    background-color:#f9ad4a;
     height: 4px;
     width: 0%;
     border-radius: 4px;
@@ -87,25 +100,26 @@ button {
     width: 100%;
 }
 
-
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
+    margin-top: 20px;
 }
 
 #map {
     width: 100%;
     height: 50vh;
     border: 1px solid #ccc;
+    margin-bottom: 20px;
 }
 
 .text-content {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
+    margin-top: 20px;
 }
 
 .text-box {
@@ -114,6 +128,7 @@ button {
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 h1 {
@@ -130,14 +145,110 @@ p {
 @media (min-width: 768px) {
     .container {
         flex-direction: row;
+        margin-top: 40px;
     }
 
     #map {
         width: 60%;
         height: 80vh;
+        margin-bottom: 20px;
     }
 
     .text-content {
         width: 35%;
+        margin-top: 0;
     }
+
+    .menu {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+
+    .logo {
+        margin: 0;
+    }
+}
+@media (min-width: 768px) {
+  .container {
+      flex-direction: row;
+      margin-top: 40px;
+  }
+
+  #map {
+      width: 60%;
+      height: 80vh;
+      margin-bottom: 20px;
+  }
+
+  .text-content {
+      width: 35%;
+      margin-top: 0;
+  }
+
+  .menu {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 80px;
+      margin-top: 40px; /* Ajoute une marge en haut du menu pour les écrans plus larges */
+  }
+
+  .logo {
+      margin: 0;
+  }
+}
+
+/* Styles for small screens (mobile devices) */
+@media (max-width: 767px) {
+  header {
+      padding: 10px 5%;
+  }
+
+  .home {
+      margin-bottom: 40px;
+  }
+
+  .menu {
+      margin-bottom: 40px;
+  }
+
+  .logo {
+      font-size: 30px;
+      margin-bottom: 10px;
+  }
+
+  .links li {
+      margin: 0 10px;
+  }
+
+  .container {
+      margin-top: 20px;
+  }
+
+  #map {
+      height: 30vh;
+  }
+
+  .text-content {
+      padding: 10px;
+  }
+}
+
+/* Styles for extra small screens (very small mobile devices) */
+@media (max-width: 480px) {
+  .logo {
+      font-size: 24px;
+  }
+
+  .links li {
+      margin: 0 5px;
+  }
+
+  #map {
+      height: 25vh;
+  }
+
+  .text-content {
+      padding: 5px;
+  }
 }
