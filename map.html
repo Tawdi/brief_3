@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carte de Safi</title>
+    <title>Carte et Texte</title>
     <link rel="stylesheet" href="/brief_3/public/css/map.css">
-    <script src="/brief_3/public/js/map.js" defer></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
-    <h1>Carte des analyses de sol à Safi</h1>
-    <div id="map"></div>
+    <nav>
+        <ul class="links">
+            <li><a href="#">acceuil</a></li>
+            <li><a href="#">à propose</a></li>
+            <li><a href="#">analyse de sol</a></li>
+            <li><a href="#">carte graphique</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    <div class="container">
+        <div id="map"></div>
+        <div class="text-content">
+            <h1>Carte d'Analyse des Sols - Région de Safi</h1>
+            <div class="text-box">
+                <p>La carte interactive de la région de Safi fournit une vue détaillée des propriétés des sols, incluant la matière organique, le pH, le phosphore (P2O5), le potassium (K2O) et la salinité (Ec). Ces données sont essentielles pour optimiser les pratiques agricoles, gérer les ressources naturelles et évaluer la fertilité du sol. Les échantillons ont été prélevés à divers points de la région, et les résultats sont visualisés pour faciliter l'interprétation. La carte aide à adapter les pratiques agricoles et à assurer une gestion environnementale efficace.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="/brief_3/public/js/map.js"></script>
 </body>
 </html>
