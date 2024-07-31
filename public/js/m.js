@@ -1,15 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialiser la carte
-    const map = L.map('map').setView([32.205973, -9.137056
-// 32.664108, -9.006899   32.28335-8.987457
-    ], 9.3); // Position initiale et zoom
 
-    // Ajouter la couche de la carte
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the map
+    const map = L.map('map').setView([32.664108, -9.006899], 10);
+
+    // Add the tile layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    // Les données
+    // Create a custom icon
+    const customIcon = L.icon({
+        iconUrl: '../../images/map_marker.png', // Remplacez par le chemin de votre logo
+        iconSize: [20, 20], // Taille de l'icône
+        iconAnchor: [16, 32], // Anchor icon to marker position
+    });
+
+    // Create a marker cluster group
+    const markers = L.markerClusterGroup();
+
+    // Your data points
     const data = [
         {"ID": 1, "Coordonnées GPS : X, Y": [32.664108, -9.006899], "pH": 6.8, "Matière organique (MO%)": 4.6, "Phosphore (P2O5) en ppm": 41.1, "Potassium (K2O) en ppm": 276.3},
         {"ID": 2, "Coordonnées GPS : X, Y": [32.664623, -9.036011], "pH": 6.7, "Matière organique (MO%)": 4.3, "Phosphore (P2O5) en ppm": 34.7, "Potassium (K2O) en ppm": 280.6},
@@ -897,215 +906,13 @@ document.addEventListener('DOMContentLoaded', function() {
            }
           
     ];
-    const customIcon = L.icon({
-        iconUrl: '../../images/map_marker.png', // Remplacez par le chemin de votre logo
-        iconSize: [20, 20], // Taille de l'icône
-        iconAnchor: [16, 32], // Point d'ancrage de l'icône (centre bas)
-    });
-    const safiGeoJSON ={
-        "type": "FeatureCollection",
-        "features": [
-          {
-            "type": "Feature",
-            "properties": {},
-            "geometry": {
-             "coordinates": [
-          [
-            -9.058411409584693,
-            32.73408156870127
-          ],
-          [
-            -8.981725311824334,
-            32.67911028572124
-          ],
-          [
-            -9.016228120339917,
-            32.60809094931119
-          ],
-          [
-            -8.966387515405643,
-            32.56926007946177
-          ],
-          [
-            -8.855188071148916,
-            32.488379567899784
-          ],
-          [
-            -8.778496123315335,
-            32.5142458232357
-          ],
-          [
-            -8.69415065495673,
-            32.51746170821701
-          ],
-          [
-            -8.609836899085906,
-            32.47215149160627
-          ],
-          [
-            -8.602204711514759,
-            32.41065017524873
-          ],
-          [
-            -8.54483534572978,
-            32.31993750857637
-          ],
-          [
-            -8.708579425707,
-            32.193478049159836
-          ],
-          [
-            -8.763157342566359,
-            31.992654838947686
-          ],
-          [
-            -8.853145895784536,
-            31.823519845868034
-          ],
-         
-          
-         
-          
-          [
-            -9.52584753102144,
-            31.876039909285126
-          ],
-          [
-            -9.494351923968082,
-            31.883877294358015
-          ],
-          [
-            -9.46759788319909,
-            31.911531613229712
-          ],
-         
-          [
-            -9.46615641673398,
-            31.914946989670852
-          ],
-          [
-            -9.376127152609229,
-            32.00300870653395
-          ],
-          [
-            -9.341174444307228,
-            32.038931813404204
-          ],
-          [
-            -9.341173683062152,
-            32.05060372515709
-          ],
-          [
-            -9.327416091758295,
-            32.06853870063068
-          ],
-          [
-            -9.327411141530462,
-            32.085596088620974
-          ],
-          [
-            -9.312588526064474,
-            32.10353322287861
-          ],
-          [
-            -9.316805384507944,
-            32.11792287136717
-          ],
-          [
-            -9.25531424880944,
-            32.19425778322696
-          ],
-          [
-            -9.267582000826678,
-            32.26718284009225
-          ],
-          [
-            -9.245707294070883,
-            32.29166719035207
-          ],
-          [
-            -9.238601587856095,
-            32.31620205691948
-          ],
-          [
-            -9.283169015392986,
-            32.33059361907199
-          ],
-          [
-            -9.287060737591872,
-            32.36120528062452
-          ],
-          
-          [
-            -9.263518887745477,
-            32.39530467169564
-          ],
-          [
-            -9.233093257241194,
-            32.47822662137723
-          ],
-          [
-            -9.274086242939546,
-            32.529484876398925
-          ],
-          [
-            -9.111069516443507,
-            32.670009489723554
-          ],
-         
-          [
-            -9.0574885807481,
-            32.73404336692376
-          ]
-        ],
-              "type": "LineString"
-            }
-          }
-        ]
-      }
-    //  {
-    //     "type": "FeatureCollection",
-    //     "features": [
-    //         {
-    //             "type": "Feature",
-    //             "geometry": {
-    //                 "type": "Polygon",
-    //                 "coordinates": [
-    //                     [
-    //                         [-9.241, 32.296],
-    //                         [-9.235, 32.298],
-    //                         [-9.230, 32.292],
-    //                         [-9.220, 32.290],
-    //                         [-9.210, 32.285],
-    //                         [-9.241, 32.296]
-    //                     ]
-    //                 ]
-    //             },
-    //             "properties": {
-    //                 "name": "Safi"
-    //             }
-    //         }
-    //     ]
-    // };
 
-    // Add the GeoJSON layer to the map
-    // L.geoJSON(safiGeoJSON, {
-    //     style: {
-    //         color: '#ff0000', // Red border color
-    //         weight: 2, // Border width
-    //         fillColor: '#ffcccc', // Fill color
-    //         fillOpacity: 0.5 // Fill opacity
-    //     }
-    // }).addTo(map);
-    // Ajouter les marqueurs à la carte
+    // Add markers to the cluster group
     data.forEach(point => {
         const marker = L.marker(point["Coordonnées GPS : X, Y"], {
             icon: customIcon,
-            opacity: 0.5 // Initial low opacity
-        }).addTo(map);
-
-        // Ajouter un événement de clic sur le marqueur
-        marker.bindPopup(`
+            opacity: 0.6 // Set initial opacity
+        }).bindPopup(`
             <b>Coordonnées :</b><br>
             Latitude : ${point["Coordonnées GPS : X, Y"][0]}<br>
             Longitude : ${point["Coordonnées GPS : X, Y"][1]}<br>
@@ -1115,29 +922,24 @@ document.addEventListener('DOMContentLoaded', function() {
             Potassium (K2O) : ${point["Potassium (K2O) en ppm"]} ppm
         `);
 
-        // Add hover effects
-        marker.on('mouseover', function() {
-            this.setOpacity(1); // Full opacity on hover
-        });
-
-        marker.on('mouseout', function() {
-            this.setOpacity(0.5); // Back to initial opacity
-        });
+        // Add marker to the cluster group
+        markers.addLayer(marker);
     });
 
-    // Ajouter les marqueurs à la carte
-    // data.forEach(point => {
-    //     const marker = L.marker(point["Coordonnées GPS : X, Y"]).addTo(map);
+    // Add the cluster group to the map
+    map.addLayer(markers);
 
-    //     // Ajouter un événement de clic sur le marqueur
-    //     marker.bindPopup(`
-    //         <b>Coordonnées :</b><br>
-    //         Latitude : ${point["Coordonnées GPS : X, Y"][0]}<br>
-    //         Longitude : ${point["Coordonnées GPS : X, Y"][1]}<br>
-    //         pH : ${point["pH"]}<br>
-    //         Matière Organique : ${point["Matière organique (MO%)"]}%<br>
-    //         Phosphore (P2O5) : ${point["Phosphore (P2O5) en ppm"]} ppm<br>
-    //         Potassium (K2O) : ${point["Potassium (K2O) en ppm"]} ppm
-    //     `).openPopup();
-    // });
+    // Add hover effects
+    map.on('layeradd', function(event) {
+        if (event.layer instanceof L.MarkerClusterGroup) {
+            event.layer.eachLayer(function(marker) {
+                marker.on('mouseover', function() {
+                    this.setOpacity(1);
+                });
+                marker.on('mouseout', function() {
+                    this.setOpacity(0.6);
+                });
+            });
+        }
+    });
 });
