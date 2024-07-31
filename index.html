@@ -9,7 +9,9 @@
     <script src="https://kit.fontawesome.com/1d908221e9.js" crossorigin="anonymous"></script>
 <!-- <script src="https://kit.fontawesome.com/61523b4b4d.js" crossorigin="anonymous"></script> -->
 
-    <title>houda</title>
+
+    <title>ichrak</title>
+
     <link rel="stylesheet" href="public/main.css">
 </head>
 <body>
@@ -17,12 +19,14 @@
       <div class="menu">
       <div class="logo">
         Sol
+        <!-- <button class="openbtn" onclick="openNav()">ouvrir</button> -->
       </div>
       <nav>
       <ul class="links">
+        <!-- <button class="closebtn" onclick="closeNav()">fermer</button> -->
           <li><a href="#">acceuil</a></li>
-          <li><a href="#">à propose</a></li>
-          <li><a href="#">analyse de sol</a></li>
+          <li><a href="#">à propos</a></li>
+          <li><a href="#ana">analyse de sol</a></li>
           <li><a href="map.html">carte graphique</a></li>
           <li><a href="#">contact</a></li>
         </ul>
@@ -45,7 +49,8 @@
     <div class="video_box animate-on-scroll">
     <video autoplay muted loop>
       <!-- <source src="images/istockphoto-1488050220-640_adpp_is.mp4" type="video/mp4"> -->
-      <source src="videos/istockphoto-2059936218-640_adpp_is.mp4" type="video/mp4">
+      <!-- <source src="videos/istockphoto-2059936218-640_adpp_is.mp4" type="video/mp4"> -->
+      <source src="videos/000istockphoto-180003452-640_adpp_is.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     </div> 
@@ -67,57 +72,54 @@
     </section>
 
 
-    <section class="analyse">
-      <!-- <div class="mycard">
-        <div class="cimg">
-          <img src="images/analyse-sol-uneal.jpg">
-        </div>
-        <div class="cdetail">
-          <h2>Card no1</h2>
-          <p>
-            this is the one of the beautiful image of beautiful nature there we have the oportunity live with such a nice creature
-          </p>
-        </div>
-      </div>
+    <section class="analyse  animate-on-scroll" id="ana">
 
-      <div class="mycard">
-        <div class="cimg">
-          <img src="images/analyse-sol-uneal.jpg">
-        </div>
-        <div class="cdetail">
-          <h2>Card no2</h2>
-          <p>
-            this is the one of the beautiful image of beautiful nature there we have the oportunity live with such a nice creature
-          </p>
-        </div>
-      </div> -->
-
-      <div class="card">
-        <div class="image">
+      <div class="card  animate-on-scroll">
+        <div class="image  animate-on-scroll">
           <img src="images/analyse-sol-uneal.jpg" alt="Échantillon du sol">
         </div>
-        <div class="content">
-          <h3>L'échantillon du sol</h3>
-          <p>Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.</p>
+        <div class="content  animate-on-scroll">
+          <h3><a href="#ec">L'échantillon du sol</a></h3>
+          <p>Un échantillon de sol, bien prélevé, permet d'analyser la fertilité et les besoins du terrain pour optimiser les pratiques agricoles.</p>
         </div>
       </div>
-      <div class="card">
-        <div class="image">
-          <img src="" alt="Profondeur du prélèvement">
+      <div class="card  animate-on-scroll">
+        <div class="image  animate-on-scroll" >
+          <img src="images/prf.jpg" alt="Profondeur du prélèvement">
         </div>
-        <div class="content">
-          <h3>La profondeur du prélèvement</h3>
-          <p>Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.</p>
+        <div class="content  animate-on-scroll">
+          <h3><a href="#pr">La profondeur du prélèvement</a></h3>
+          <p>La profondeur du prélèvement est clé pour obtenir des analyses précises, car les différentes couches du sol varient en composition.</p>
         </div>
       </div>
 
     </section>
 
 
-    <section></section>
+    <section class="echantillon_du_sol animate-on-scroll" id="ec">
+      <div class="content_box_echantillon_du_sol animate-on-scroll">
+        <h2 class="small_title_content_box_echantillon_du_sol animate-on-scroll">L’échantillon du sol</h2>
+        <p>L’échantillon du sol est une petite quantité de terre, de 800 g à 1kg environ, qui est censé représenter avec fiabilité les propriétés physiques, chimiques et biologiques du sol. Un échantillon résulte d’une dizaine de prélèvements dans un terrain homogène, à condition de ne pas dépasser 2 ha. Dans un terrain hétérogène, il faut un échantillon par type de sol différent, en tenant compte des antécédents culturaux. 
+           <br>Le prélèvement peut avoir lieu en suivant l’une des modalités suivantes: au hasard, en diagonales ou en zigzag.
+        </p>
+        </div>
+
+        <div class="image_box_echantillon_du_sol animate-on-scroll" >
+          <img style="border: rgb(108 171 67) 2PX solid; border-radius: 80px 0px 80px 0px;" src="images/preleve-vf.jpg" alt="image4">
+        </div>
+    </section>
 
 
-    <section></section>
+    <section class="echantillon_du_sol animate-on-scroll" id="pr">
+      <div class="content_box_echantillon_du_sol animate-on-scroll">
+        <h2 class="small_title_content_box_echantillon_du_sol animate-on-scroll">Profondeur du prélèvement</h2>
+        <p>La profondeur du prélèvement des échantillons doit être adaptée au système racinaire de la culture en question. En principe l’échantillon doit refléter en exclusivité la fertilité au niveau de la zone racinaire. Les cultures annuelles forment des racines à une profondeur faible à moyenne, et pour cette raison qu’on procède à des prélèvements entre 0-30cm. Tandis que les cultures pérennes développent à la fois des racines superficielles et des racines profondes. Le prélèvement dans ce cas doit se faire à deux profondeurs un premier à 30cm et un deuxième à 60cm, ainsi chaque profondeur doit faire objet d’une analyse séparé.    
+        </p>
+        </div>
+        <div class="image_box_echantillon_du_sol animate-on-scroll">
+          <img style="border: rgb(108 171 67) 2PX solid; border-radius: 80px 0px 80px 0px;" src="images/5.png" alt="image5">
+        </div>
+    </section>
 
 
     <footer></footer>
