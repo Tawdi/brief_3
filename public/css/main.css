@@ -444,7 +444,13 @@ footer .copyright{
     padding: 20px;
     gap: 30px;
   }
-  
+  .analyse{
+    flex-direction: column;
+    align-items: center;
+  }
+  .analyse .card{
+    width: 80%;
+  }
    .video_box video , .video_box{
     height: 0px;
    }
