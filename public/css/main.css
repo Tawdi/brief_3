@@ -158,9 +158,9 @@ button{
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 40px;
-  font-style: italic;
-  font-family: 'Anton',sans-serif;
+  font-size: 30px;
+  /* font-style: italic; */
+  /* font-family: 'Anton',sans-serif; */
 }
 
 .links{
