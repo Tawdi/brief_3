@@ -1,8 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialiser la carte
-    const map = L.map('map').setView([32.205973, -9.137056
-// 32.664108, -9.006899   32.28335-8.987457
-    ], 9.3); // Position initiale et zoom
+    const map = L.map('map', {
+       
+        minZoom: 8.4,
+        maxZoom: 14,
+        maxBoundsViscosity: 1.0, // Controls how much the user can drag the map outside the bounds
+        touchZoom: true, // Enable pinch-zoom functionality
+        dragging: true, // Enable map dragging
+        zoomControl: true // Enable zoom control
+    }).setView([32.205973, -9.137056], 9.3); // Position initiale et zoom
 
     // Ajouter la couche de la carte
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

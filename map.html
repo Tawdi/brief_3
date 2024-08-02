@@ -9,28 +9,42 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet-markercluster@1.7.0/dist/MarkerCluster.Default.css" />
     <link rel="shortcut icon" href="images/analyse-de-sol.png" type="image/x-icon">
     <link rel="stylesheet" href="public/css/map.css">
+
     
 
 </head>
 <body>
-    <div class="menu-container">
-        <button class="menu-toggle" id="menu-toggle">
-            <span class="menu-icon"></span>
-            <span class="menu-icon"></span>
-            <span class="menu-icon"></span>
-        </button>
-        <nav>
-            <ul class="links">
-
-                <li><a href="index.html">Accueil</a></li>
-                
-                <li><a href="index.html">Analyse de sol</a></li>
-                <li><a href="map.html">Carte géographique</a></li>
-                <li><a href="index.html#ftr">Contact</a></li>
-
-            </ul>
+    
+      <div class="head">
+        <div class="logo">
+          SOL
+        </div>
+        <nav class="menu">
+          <ul class="links">
+            <li><a href="index.html">acceuil</a></li>
+            <li><a href="index.html#ap">analyse de sol</a></li>
+            <li><a href="map.html">carte géographique</a></li>
+            <li><a href="index.html#ftr">contact</a></li>
+  
+          </ul>
+            
         </nav>
+  
     </div>
+   
+    <svg class="burger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+    <nav class="phone hidden">
+        <ul class="phoneUl">
+          <li><a href="#">acceuil</a></li>
+            <li><a href="#ana">analyse de sol</a></li>
+            <li><a href="map.html">carte géographique</a></li>
+            <li><a href="#ftr">contact</a></li>
+        </ul>
+    </nav>
+     
+     
     
     <div class="container">
         <div id="map"></div>
@@ -48,6 +62,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-markercluster@1.7.0/dist/leaflet-markercluster.js"></script>
     <script src="public/js/map.js"></script>
+    <script src="public/js/main.js"></script>
 
 </body>
 </html>

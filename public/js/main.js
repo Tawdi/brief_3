@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector(".burger");
+  const phone = document.querySelector('.phone');
+
+  burger.addEventListener('click', () => {
+      phone.classList.toggle('hidden');
+  });
+});
+document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll('.animate-on-scroll');
 
   const observer = new IntersectionObserver((entries, observer) => {
