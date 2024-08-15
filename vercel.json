@@ -1,7 +1,9 @@
 {
   "version": 2,
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/map", "destination": "/map.html" }
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
